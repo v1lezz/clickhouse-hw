@@ -1,0 +1,12 @@
+version: '3.7'
+services:
+  clickhouse:
+    image: clickhouse/clickhouse-server
+    container_name: ch
+    ports:
+      - "8123:8123"
+      - "9000:9000"
+    environment:
+      - CLICKHOUSE_DB=clickhouse_hw
+      - CLICKHOUSE_USER=v1lezz
+      - CLICKHOUSE_PASSWORD=1234
